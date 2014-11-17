@@ -28,6 +28,7 @@ class request(osv.osv):
 
     _defaults = {
         'state': 'draft',
+        'user_id': lambda self, cr, uid: uid,
     }
 
     _constraints = [

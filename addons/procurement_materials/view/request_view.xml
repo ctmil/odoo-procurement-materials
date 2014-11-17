@@ -58,6 +58,8 @@
                             /> 
                         <field name="date_planned"
                             /> 
+                        <field name="line_ids"
+                        /> 
                      </group>
                     </sheet>
 
