@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record id="action_procurement_materials_request_procurement_materials" model="ir.actions.act_window">
+            <field name="name">Procurement Materials</field>
+            <field name="res_model">procurement_materials.request</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="view_procurement_materials_request_tree"/>
+            <field name="search_view_id" ref="view_procurement_materials_request_filter"/>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create"> Click to create a Procurement Materials.</p>
+            </field>
+        </record>
+
+        <menuitem
+            name="menu_procurement_management/Procurement Materials"
+            id="menu_procurement_materials"
+            sequence="10"
+            action="action_procurement_materials_request_procurement_materials"
+            />
+    </data>
+</openerp>
+<!-- vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4
+     -->

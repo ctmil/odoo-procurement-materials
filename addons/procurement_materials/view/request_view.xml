@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <!-- SEARCH VIEW -->
+        <record id="view_procurement_materials_request_filter" model="ir.ui.view">
+            <field name="name">procurement_materials.request.select</field>
+            <field name="model">procurement_materials.request</field>
+            <field name="arch" type="xml">
+                <search string="request" version="7.0">
+                    <group string="By Attribute">
+                        <field name="user_id" string="user_id"
+                            />
+                        <field name="section_id" string="section_id"
+                            />
+                        <field name="date_planned" string="date_planned"
+                            />
+                    </group>
+                    <group string="By object">
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <!-- FORMVIEW -->
+        <record id="view_procurement_materials_request_form" model="ir.ui.view">
+            <field name="name">procurement_materials.request.form</field>
+            <field name="model">procurement_materials.request</field>
+            <field name="arch" type="xml">
+                <form string="request" version="7.0">
+                    <header>
+                        <button name="sgn_confirm"
+                            states="draft"
+                            string="Confirm"
+                            />
+                        <button name="sgn_process"
+                            states="confirmed"
+                            string="Process"
+                            />
+                        <button name="sgn_done"
+                            states="in_progress"
+                            string="Done"
+                            />
+                        <button name="sgn_cancel"
+                            states="confirmed,in_progress"
+                            string="Cancel"
+                            />
+                        <field name="state" widget="statusbar"
+                            statusbar_colors='{}'
+                            />
+                    </header>
+                    <sheet string="request">
+                       <div class="oe_right oe_button_box" name="buttons">
+                       </div>
+                     <group>
+                        <field name="user_id"
+                            /> 
+                        <field name="section_id"
+                            /> 
+                        <field name="date_planned"
+                            /> 
+                     </group>
+                    </sheet>
+
+                </form>
+            </field>
+        </record>
+
+        <!-- TREEVIEW -->
+        <record id="view_procurement_materials_request_tree" model="ir.ui.view">
+            <field name="name">procurement_materials.request.tree</field>
+            <field name="model">procurement_materials.request</field>
+            <field name="arch" type="xml">
+                <tree string="request"
+                    colors="grey:state=='cancelled';blue:state in (u'draft',);black:state in (u'confirmed', u'in_progress');red:state in ()"
+                    >
+                    <field name="user_id"
+                        />
+                    <field name="section_id"
+                        />
+                    <field name="date_planned"
+                        />
+                    <field name="state"
+                        />
+                </tree>
+            </field>
+        </record>
+
+    </data>
+</openerp>
+<!-- vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4
+     -->
