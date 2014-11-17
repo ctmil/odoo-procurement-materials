@@ -20,7 +20,7 @@ class request(osv.osv):
 
     _columns = {
        'user_id': fields.many2one('res.users', string=_('user_id')),
-       'section_id': fields.many2one('sale.case.section', string=_('section_id')),
+       'section_id': fields.many2one('crm.case.section', string=_('section_id')),
        'date_planned': fields.date(string=_('date_planned')),
        'state': fields.selection(_states_, "State"),
        'line_ids': fields.one2many('procurement_materials.request_line', 'request_id', string=_('line_ids')),

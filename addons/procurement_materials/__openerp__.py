@@ -12,7 +12,7 @@
                 'security/ir.model.access.csv',
                 u'view/procurement_materials_menuitem.xml',
                 u'view/procurement_materials_actions.xml'],
-    'depends': [u'product', u'sale'],
+    'depends': [u'product', u'crm'],
     'description': 'No documented',
     'installable': True,
     'license': 'AGPL-3',
