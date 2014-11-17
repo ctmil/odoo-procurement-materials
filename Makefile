@@ -1,4 +1,4 @@
-PROYECT=procurement-materials
+PROYECT=procurement_materials
 DESIGNDIR=design
 WORKDIR=${DESIGNDIR}/tmp
 ZARGO=${DESIGNDIR}/${PROYECT}.zargo
