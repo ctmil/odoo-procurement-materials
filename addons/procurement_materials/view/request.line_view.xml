@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <!-- SEARCH VIEW -->
+        <record id="view_procurement_materials_request.line_filter" model="ir.ui.view">
+            <field name="name">procurement_materials.request.line.select</field>
+            <field name="model">procurement_materials.request.line</field>
+            <field name="arch" type="xml">
+                <search string="request.line" version="7.0">
+                    <group string="By Attribute">
+                        <field name="product_id" string="product_id"
+                            />
+                        <field name="product_qty" string="product_qty"
+                            />
+                        <field name="product_uom" string="product_uom"
+                            />
+                    </group>
+                    <group string="By object">
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <!-- FORMVIEW -->
+        <record id="view_procurement_materials_request.line_form" model="ir.ui.view">
+            <field name="name">procurement_materials.request.line.form</field>
+            <field name="model">procurement_materials.request.line</field>
+            <field name="arch" type="xml">
+                <form string="request.line" version="7.0">
+                    <header>
+                    </header>
+                    <sheet string="request.line">
+                       <div class="oe_right oe_button_box" name="buttons">
+                       </div>
+                     <group>
+                        <field name="product_id"
+                            /> 
+                        <field name="product_qty"
+                            /> 
+                        <field name="product_uom"
+                            /> 
+                     </group>
+                    </sheet>
+
+                </form>
+            </field>
+        </record>
+
+        <!-- TREEVIEW -->
+        <record id="view_procurement_materials_request.line_tree" model="ir.ui.view">
+            <field name="name">procurement_materials.request.line.tree</field>
+            <field name="model">procurement_materials.request.line</field>
+            <field name="arch" type="xml">
+                <tree string="request.line"
+                    colors=""
+                    >
+                    <field name="product_id"
+                        />
+                    <field name="product_qty"
+                        />
+                    <field name="product_uom"
+                        />
+                </tree>
+            </field>
+        </record>
+
+    </data>
+</openerp>
+<!-- vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4
+     -->
